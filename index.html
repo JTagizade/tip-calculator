@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Tip calculator app</title>
+  <style>
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} 
+  </style>
+  <script src="https://kit.fontawesome.com/55fe2e26b2.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.tailwindcss.com">
+     
+   </script>
+</head>
+<body class="bg-blue-100">
+
+
+
+  <div class="flex items-center justify-between bg-white px-[25px] w-[875px] h-[450px] rounded-[30px] mx-auto mt-[200px]">
+
+    <div class="flex flex-col justify-between  border-black size-[400px] rounded-[20px] py-2">
+      <div class="flex flex-col">
+        <div class="flex justify-between items-end">
+          <p class="text-[24px]">Bill</p>
+          <p class="text-[14px] text-red-500 hidden cant-be-zero">Can't be zero</p>
+        </div>
+        <div class="bg-gray-100 pl-3">
+          <i class="fa-solid fa-dollar-sign"></i>
+         <input type="number" placeholder="0" class="bg-gray-100 h-[40px] w-[95%] rounded-sm text-right bill">
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <p class="text-[24px]">Select Tip %</p>
+        <div class="flex flex-wrap justify-between gap-3">
+          <button class="bg-[#383838] w-[120px] h-[40px] text-white rounded-sm tip-btn">5%</button>
+          <button class="bg-[#383838] w-[120px] h-[40px] text-white rounded-sm tip-btn">10%</button>
+          <button class="bg-[#383838] w-[120px] h-[40px] text-white rounded-sm tip-btn">15%</button>
+          <button class="bg-[#383838] w-[120px] h-[40px] text-white rounded-sm tip-btn">25%</button>
+          <button class="bg-[#383838] w-[120px] h-[40px] text-white rounded-sm tip-btn">50%</button>
+          <input type="number" placeholder="Custom" maxlength="3" class="w-[120px] h-[40px] rounded-sm bg-gray-100 text-center custom-tip">
+        </div>  
+      </div>
+      <div class="flex flex-col">
+        <div class="flex justify-between items-end">
+          <p class="text-[24px]">Number of People</p>
+          <p class="text-[14px] text-red-500 hidden cant-be-zero1">Can't be zero</p>
+        </div>
+        <div class="bg-gray-100 pl-3">
+          <i class="fa-solid fa-user"></i>
+          <input type="number" placeholder="0" class="bg-gray-100 h-[40px] w-[95%] text-right people">
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col bg-[#383838] size-[400px] rounded-[20px] p-[40px] gap-10">
+      <div class="flex justify-between">
+        <div class="flex flex-col">
+          <p class="text-white text-[18px]">Tip Amount</p>
+          <span class="text-gray-400">/ person</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-dollar-sign text-[20px] text-gray-400"></i>
+          <p class="text-[32px] text-gray-400 tip-amount">0.00</p>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <div class="flex flex-col">
+          <p class="text-white text-[18px]">Total</p>
+          <span class="text-gray-400">/ person</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-dollar-sign text-[20px] text-gray-400"></i>
+          <p class="text-[32px] text-gray-400 total-bill">0.00</p>
+        </div>
+      </div>
+      <div class="flex justify-center mt-[100px]">
+        <button class="bg-gray-100 w-[250px] h-[40px] rounded-sm hover:opacity-60 opacity-60 cursor-not-allowed reset-button">RESET</button>
+      </div>
+    </div>
+
+  </div>
+
+ <script src="script.js"></script>  
+  
+</body>
+</html>
